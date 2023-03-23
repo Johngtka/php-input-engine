@@ -1,0 +1,41 @@
+<!-- templatka html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- część head odpowiada za przechowyanie konfiguracji strony czyli np:
+    - tytuł 
+    - kodowanie znaków (czy będzie obsługiwać polskie znaki)
+    - konfiguracje skali
+    - style
+    - js
+     i etc.
+-->
+
+<head>
+    <!-- kodowanie pl -->
+    <meta charset="UTF-8">
+    <!-- skala -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tytuł -->
+    <title>Index</title>
+</head>
+
+<!-- 
+    w body natomiast znajdują się treści na stronie, które są widoczne.
+    Tutaj w body znajduje się formulaż z akcją ustawioną na plik php którym wy będziecie się zajmować
+    Ten formulaż ma metode przesyłu ustawioną na post czyli taką która nie pozwoli wniknąć hackerowi do danych które mogą być widoczne w linku między formulażem a php np za pomocą metody get
+-->
+
+<body>
+    <form action="input.php" method="post">
+        <!-- Puki co to w formulażu są 2 inputy text, submit i reset -->
+        <input type="text" name="name" placeholder="imię" required><br>
+        <input type="text" name="surname" placeholder="nazwisko" required><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        <!-- text służą do wpisywania tekstu a reset i submit do resetu i wysyłki -->
+    </form>
+</body>
+<!-- teraz wróćcie do readme.txt -->
+
+</html>
